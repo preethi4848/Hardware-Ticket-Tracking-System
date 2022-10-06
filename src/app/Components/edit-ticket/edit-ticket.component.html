@@ -1,0 +1,32 @@
+<div class="container">
+    <!-- <span>
+        {{foundEmp | json}}
+    </span> -->
+    <div class="row">
+        <div class="col-md-7">
+            <h2>Details of the Ticket Raised</h2>
+        <hr>
+        <p>Ticket ID: <input type="number" disabled class="form-control" [(ngModel)]="foundEmp.ticketId"></p>
+        <p>Employee Name:<input type="text" disabled class="form-control" [(ngModel)]="foundEmp.empName"></p>
+        <p>Email Address:<input type="email" disabled class="form-control" [(ngModel)]="foundEmp.empAddress"></p>
+        <p>Type:<input type="text" disabled class="form-control" [(ngModel)]="foundEmp.type"></p>
+        <p>Description:<input type="text" disabled class="form-control" [(ngModel)]="foundEmp.description"></p>
+        <p>
+            Status:<select type="se" class="form-control"  [(ngModel)]="foundEmp.status">
+                <option value="Opened">Opened</option>
+                <option value="Closed">Closed</option>
+                <option value="Under Review">Under Review</option>
+            </select>
+
+        </p>
+        <p>
+            <button class="btn btn-info" (click)="onSubmit()">Save Changes </button>
+            <button class="btn btn-primary" routerLink="/Tickets/All">
+                <i class="fa fa-arrow-left"></i>
+                Back
+            </button>
+        </p>
+        </div>
+        
+    </div>
+</div>

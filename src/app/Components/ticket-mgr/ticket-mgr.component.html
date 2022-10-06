@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <h2>List of All Tickets</h2>
+        <hr/>
+        <div *ngFor="let emp of ticketList" class="col-md-6">
+            <div class="card-list-group">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <img class="card-img" [src]="emp.image" height="220px" width="200px"/>
+                        </div>
+                
+                        <div class="col-sm-5">
+                            <input type="number" class="form-control" disabled [value]="emp.ticketId" />
+                            <input type="text" class="form-control" disabled [value]="emp.empName" />
+                            <input type="text" class="form-control" disabled [value]="emp.empAddress" />
+                            <input type="text" class="form-control" disabled [value]="emp.type" />
+                            <input type="text" class="form-control" disabled [value]="emp.description" />
+                            <input type="text" class="form-control" disabled [value]="emp.status" />
+
+                            <br>
+                        </div>
+                        <div class="col-sm-1">
+                            <ul class="navbar-nav">
+                                <br>
+                                <li class="nav-item">
+                                    <a class="btn btn-info p-2">
+                                        <i routerLink="/Tickets/Edit/{{emp.ticketId}}" class="fa fa-pencil fa-fw"></i>
+                                    </a>
+                                </li>
+                                <br>
+                                <li class="nav-item">
+                                    <a class="btn btn-primary p-2">
+                                        <i routerLink="/Tickets/View/{{emp.ticketId}}" class="fa fa-eye fa-fw"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

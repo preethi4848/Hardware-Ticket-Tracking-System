@@ -1,0 +1,23 @@
+<!-- <span>
+    {{selected | json}}
+</span> -->
+<div class= "container">
+    <div class="row">
+        <div class="col-md-5">
+        <h3>Details of the Ticket Raised</h3>
+        <hr>
+        <p>
+            <img class="card-img" [src]="selected.image" height="300px" width="150px"/>
+        </p>
+        <p><input type="text" disabled class="form-control" [(ngModel)]="selected.ticketId" /></p>
+        <p><input type="text" disabled class="form-control" [(ngModel)]="selected.empName" /></p>
+        <p><input type="text" disabled class="form-control" [(ngModel)]="selected.empAddress" /></p>
+        <p><input type="text" disabled class="form-control" [(ngModel)]="selected.type" /></p>
+        <p><input type="text" disabled class="form-control" [(ngModel)]="selected.description"></p>
+        <p><input type="text" disabled class="form-control" [(ngModel)]="selected.status"></p>
+        <p>
+            <button class="btn btn-primary" routerLink="/Tickets/All"><i class="fa fa-arrow-left"></i>Back</button>
+        </p>
+    </div>
+</div>
+</div>

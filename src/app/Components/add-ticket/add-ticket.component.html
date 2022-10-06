@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <p>
+                Enter Employee Name:
+                <input [(ngModel)]="newTicket.empName" placeholder="Enter Name" class="form-control" />
+            </p>
+
+            <p>
+                Enter Employee Email Address :
+                <input [(ngModel)]="newTicket.empAddress" placeholder="Enter Email Address " class="form-control" />
+            </p>
+
+            <p>
+                Select the Service Type:
+                <select [(ngModel)]="newTicket.type" placeholder="Enter service type" class="form-control">
+                    <option value="Technical">Technical</option>
+                    <option value="Hardware">Hardware</option>
+                    <option value="Software">Software</option>
+                </select>
+            </p>
+
+            <p>
+                Enter Description:
+                <input [(ngModel)]="newTicket.description" placeholder="Enter Description" class="form-control" />
+            </p>
+
+            <p>
+                Current Status:
+                <select [(ngModel)]="newTicket.status" placeholder="Status" class="form-control">
+                    <option value="Opened">Opened</option>
+                </select>
+            </p>
+
+            <p>
+                Select the Image:
+                <input type="file" [(ngModel)]="newTicket.image" (change)="onChange($event)"
+                    placeholder="Select the Image" class="form-control" />
+            </p>
+
+            <p>
+                <button class="btn btn-danger" (click)="onSubmit()">
+                    <i class="fa fa-round-circle"></i>Add to database</button>
+                    
+                <button class="btn btn-primary" routerLink="/Tickets/All">
+                    <i class="fa fa-arrow-left"></i>Back</button>
+            </p>
+        </div>
+    </div>
+</div>
